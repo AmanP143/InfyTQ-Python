@@ -18,8 +18,12 @@ def make_amount(rupees_to_make,no_of_five,no_of_one):
 		print(-1)
 	else:
 		five_needed=int(rupees_to_make/5)
-		one_needed=rupees_to_make-(5*five_needed)
+		if(five_needed>=no_of_five):
+			 five_needed=five_needed-1
+	        one_needed=rupees_to_make-(5*five_needed)
+		
 		print("No. of Five needed :", five_needed)
+		
 		print("No. of One needed  :", one_needed)
 
 
